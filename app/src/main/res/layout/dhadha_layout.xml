@@ -1,61 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/level_background">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="7"
+    android:padding="16dp"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dhadha"
-        android:id="@+id/dhdhatextView"
-        android:layout_margin="30dp"
+        android:textSize="18dp"
+        android:text=""
+        android:id="@+id/dhadha_headerTextVIew"
+        android:textColor="#FFF"
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Dhadha"
+        android:id="@+id/dhdhatextView"
+        android:layout_marginTop="10dp"
+        android:layout_weight="3"
+        android:textSize="16dp"
+        android:textColor="#FFF"
+        android:gravity="center_horizontal"
+        android:background="@drawable/dhddha_back"
+        android:padding="10dp"
+
+    />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:id="@+id/answer_textView"
+        android:layout_marginTop="10dp"
         android:text="Answer"
         android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="#FFF"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        android:background="@drawable/answer_back"
         />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/showAnswerButton"
-        android:text="Show Answer"
-        android:layout_marginTop="20dp"
-        />
-
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/buttton_back"
+        android:text="উত্তর দেখুন"
+        android:textSize="18dp"
+        android:textColor="#FFF" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:weightSum="2"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp"
         >
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Previous"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
             android:id="@+id/prevButton"
+            android:padding="15dp"
+            android:layout_gravity="left"
+            android:background="@drawable/buttton_back"
+
             />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next"
             android:id="@+id/nextButton"
-            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:background="@drawable/buttton_back"
+            android:padding="15dp"
+            app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
+
             />
 
-    </LinearLayout>
-
-
+    </FrameLayout>
 
 
 
 </LinearLayout>
+
+    <!-- view for AdMob Banner Ad -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit" />
+
+
+</FrameLayout>

@@ -1,4 +1,4 @@
-package ibcr.bangladhadha;
+package alvi17.bangladhadha;
 
 import org.junit.Test;
 

@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="#8ec2c2"
-    android:layout_margin="5dp"
+    android:layout_marginTop="8dp"
     android:layout_gravity="center"
     android:gravity="center"
+    android:background="@drawable/item_back"
+
     >
 
     <TextView
@@ -14,13 +15,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:visibility="gone"
+        />
 
     <TextView
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
+        android:textColor="#FFF"
+        android:padding="5dp"
+        android:text="Category"
+        android:textSize="18dp"
         android:textAppearance="?attr/textAppearanceListItem" />
 
 

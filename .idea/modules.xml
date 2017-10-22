@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bangla-Dhadha.iml" filepath="$PROJECT_DIR$/Bangla-Dhadha.iml" />
       <module fileurl="file://$PROJECT_DIR$/BanglaDhadha.iml" filepath="$PROJECT_DIR$/BanglaDhadha.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

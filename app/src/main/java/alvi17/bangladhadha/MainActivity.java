@@ -1,9 +1,12 @@
-package ibcr.bangladhadha;
+package alvi17.bangladhadha;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -68,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements CategoryFragment.
 
         getSupportFragmentManager().beginTransaction().add(R.id.main_content,CategoryFragment.newInstance(1)).commit();
 
+
+        AdView adView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("0754C239B1E2E19421FDE46BCEFB8855")
+                .build();
+        adView.loadAd(adRequest);
     }
 
     @Override
@@ -75,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements CategoryFragment.
 
         Intent intent=new Intent(MainActivity.this,DhaDhaDetailsActivity.class);
         intent.putExtra("Category",item.getId());
+        intent.putExtra("Category_title",item.getTitle());
         startActivity(intent);
 
     }

@@ -1,4 +1,4 @@
-package ibcr.bangladhadha;
+package alvi17.bangladhadha;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("ibcr.bangladhadha", appContext.getPackageName());
+        assertEquals("alvi17.bangladhadha", appContext.getPackageName());
     }
 }
